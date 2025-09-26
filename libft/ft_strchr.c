@@ -2,14 +2,15 @@
 
 char *ft_strchr(const char *s, int c)
 {
-	while (*s++)
+	while (*s)
 	{
 		if (*s == c)
 		{
 			return((char*)s);
 		}
+		s++;
 	}
-	if (*s == c)
+	if ((char)c == '\0')
 	{
 		return((char*)s);
 	}

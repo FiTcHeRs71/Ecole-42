@@ -11,7 +11,7 @@ int		ft_atoi(const char *str)
 	{
 		str++;
 	}
-	if (*str == '+' || *str == '-')
+	if (*str == '+' || 	*str == '-')
 	{
 		if (*str == '-')
 		{
@@ -42,9 +42,9 @@ int		ft_atoi(const char *str)
 	return 0;
 }*/
 
-int main(void)
+/*int main(void)
 {
 	printf("Test 1 : '%s' -> %d\n", "9999999999999", atoi("9999999999999"));
-}
+}*/
 
 /*The atoi() function converts the initial portion of the string pointed to by str to int representation.*/
