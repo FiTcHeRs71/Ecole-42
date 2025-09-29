@@ -33,8 +33,8 @@ void    *ft_memmove(void *dst, const void *src, size_t len)
 }
 
 
-/*int        main(int argc, char **argv)
-	{
+int        main(int argc, char **argv)
+	/*{
 	    (void)argc;
 	    (void)argv;
 	

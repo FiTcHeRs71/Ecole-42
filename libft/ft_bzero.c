@@ -1,7 +1,3 @@
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {
