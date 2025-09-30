@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/30 09:11:34 by Frederic Du       #+#    #+#             */
+/*   Updated: 2025/09/30 09:11:34 by Frederic Du      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 
+#include "libft.h"
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	src_len;

@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/30 09:11:46 by Frederic Du       #+#    #+#             */
+/*   Updated: 2025/09/30 09:11:46 by Frederic Du      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strnstr(const char *haystack, const char *needle, size_t len)
+#include "libft.h"
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	size_t		i;
 	size_t		j;

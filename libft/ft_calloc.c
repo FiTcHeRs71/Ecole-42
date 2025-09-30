@@ -1,13 +1,25 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/30 09:10:47 by Frederic Du       #+#    #+#             */
+/*   Updated: 2025/09/30 09:10:47 by Frederic Du      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char *temp;
+	unsigned char	*temp;
 	size_t		i;
 
 	if (count == 0 || size == 0)
 	{
-        return malloc(1); 
+		return malloc(1); 
 	}
 	temp = malloc(count * size);
 	i = 0;

@@ -1,7 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/30 09:11:42 by Frederic Du       #+#    #+#             */
+/*   Updated: 2025/09/30 09:11:42 by Frederic Du      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 
+#include "libft.h"
 
-int ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	while ((*s1 || *s2) && (n > 0))
 	{

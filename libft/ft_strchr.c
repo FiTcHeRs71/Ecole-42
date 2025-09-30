@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/30 09:11:27 by Frederic Du       #+#    #+#             */
+/*   Updated: 2025/09/30 09:11:27 by Frederic Du      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 
-char *ft_strchr(const char *s, int c)
+#include "libft.h"
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
@@ -22,7 +34,7 @@ char *ft_strchr(const char *s, int c)
 	char *str = "KCORP ON FIRE !!!!";
 	int c = 'Z';
 	char *finder;
-
+d
 	finder = ft_strchr(str, c);
 	printf("%s", finder);
 }*/

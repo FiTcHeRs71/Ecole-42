@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/09/30 09:05:18 by Frederic Du       #+#    #+#             */
+/*   Updated: 2025/09/30 10:33:11 by Frederic Du      ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	int		ngps;
 	int		result;
@@ -11,7 +23,7 @@ int		ft_atoi(const char *str)
 	{
 		str++;
 	}
-	if (*str == '+' || 	*str == '-')
+	if (*str == '+' || *str == '-')
 	{
 		if (*str == '-')
 		{
@@ -47,4 +59,5 @@ int		ft_atoi(const char *str)
 	printf("Test 1 : '%s' -> %d\n", "9999999999999", atoi("9999999999999"));
 }*/
 
-/*The atoi() function converts the initial portion of the string pointed to by str to int representation.*/
+/*The atoi() function converts the initial portion of the string pointed 
+to by str to int representation.*/
