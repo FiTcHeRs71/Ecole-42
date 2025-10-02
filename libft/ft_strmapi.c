@@ -1,35 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 11:33:55 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/10/02 11:26:14 by Frederic Du      ###   ########.fr       */
+/*   Created: 2025/10/01 14:34:04 by Frederic Du       #+#    #+#             */
+/*   Updated: 2025/10/01 15:52:52 by Frederic Du      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	size_t	len;
 	size_t	i;
-	char	*dest;
+	char	*str;
 	
-	len = ft_strlen(s1);
+	len = ft_strlen(s);
 	i = 0;
-	dest = ft_calloc(len + 1, sizeof(char));
-	while (s1[i])
+	str = ft_calloc(len + 1, sizeof(char));
+	while (i < len)
 	{
-		dest[i] = s1[i];
+		str[i] = (*f)(i, s[i]);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
+	return (str);
 }
 
-/*The strdup() function allocates sufficient memory for a copy of the string s1, 
-does the copy, and returns a pointer to it. 
-The pointer may subsequently be used as an argument to the function free(3).*/
+/*char	ft_TOUP(unsigned int i, char c)
+{
+	(void) i;
+	if (c >= 'a' && c <= 'z')
+	{
+		return (c - 32);
+	}
+	return (c);
+}
+
+int	main(void)
+{
+	char	*str = "abcdefghijklmnopqrstuvwxyz";
+	char 	*retour;
+
+	retour = ft_strmapi(str, ft_TOUP);
+	printf("%s\n", retour);
+	return (0);
+}*/

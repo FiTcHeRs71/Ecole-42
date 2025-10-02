@@ -6,7 +6,7 @@
 /*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 13:26:55 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/09/30 16:04:30 by Frederic Du      ###   ########.fr       */
+/*   Updated: 2025/10/01 16:38:43 by Frederic Du      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ char	*ft_strtrim(const char *s1, const char *set)
 	return (str);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	char *s1 = "ababaaaMy name is Simonbbaaabba";
 	char *set = "ab";
@@ -43,7 +43,7 @@ int	main(void)
 	printf("%s\n", retour);
 	return (0);
 	
-}
+}*/
 
 /*The ft_strtrim() function takes a string and trims it.
 

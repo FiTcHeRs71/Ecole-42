@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 		{
 			return((char*)s);
 		}
@@ -31,11 +31,11 @@ char	*ft_strchr(const char *s, int c)
 
 /*int		main(void)
 {
-	char *str = "KCORP ON FIRE !!!!";
-	int c = 'Z';
+	char *str = "tripouille";
+	int c = 't';
 	char *finder;
-d
-	finder = ft_strchr(str, c);
+
+	finder = ft_strchr(str, c + 256);
 	printf("%s", finder);
 }*/
 

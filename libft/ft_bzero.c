@@ -28,7 +28,7 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 5;
 	ft_bzero(str, i);
-	printf("%s\n", (char*)ft_bzero(str, i));
+	//printf("%s\n", (char*)ft_bzero(str, i));
 	//printf("%s\n", (char*)bzero(str, i));
 }*/
 

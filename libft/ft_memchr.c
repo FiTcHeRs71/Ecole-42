@@ -13,14 +13,14 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *str;
-	int				i;
+	unsigned char	*str;
+	int		i;
 
 	str = (unsigned char*) s;
 	i = 0;
 	while (n-- > 0)
 	{
-		if (str[i] == c)
+		if (str[i] == (unsigned char)c)
 		{
 			return (&str[i]);
 		}
@@ -34,10 +34,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	char *str = "BONJOUR";
 	char	*r;
 	//char	*s;
-	int		c = 'J';
+	int	c = 'J';
 	size_t	n = 3;
 
-	r = ft_memchr(str, c, n);
+	r = ft_memchr(str, c + 256, n);
 	//s = memchr(str, c, n);
 
 	printf("%s\n", r);

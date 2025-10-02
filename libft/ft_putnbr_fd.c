@@ -1,35 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 11:33:55 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/10/02 11:26:14 by Frederic Du      ###   ########.fr       */
+/*   Created: 2025/10/02 14:10:33 by Frederic Du       #+#    #+#             */
+/*   Updated: 2025/10/02 15:28:27 by Frederic Du      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void ft_putnbr_fd(int n, int fd)
 {
-	size_t	len;
-	size_t	i;
-	char	*dest;
+	long int	nb;
+	long int	r;
 	
-	len = ft_strlen(s1);
-	i = 0;
-	dest = ft_calloc(len + 1, sizeof(char));
-	while (s1[i])
+	nb = n;
+	r = 0;
+	if(n < 0)
 	{
-		dest[i] = s1[i];
-		i++;
+		write(fd, "-",1);
+		nb *= -1;
 	}
-	dest[i] = '\0';
-	return (dest);
+	if (nb > 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+	}
+	r =  (nb % 10) + 48;
+	write(fd, &r, 1);
 }
 
-/*The strdup() function allocates sufficient memory for a copy of the string s1, 
-does the copy, and returns a pointer to it. 
-The pointer may subsequently be used as an argument to the function free(3).*/
+/*int	main(void)
+{
+	int		fd;
+	int	n;
+	
+	fd = open("test.txt", O_WRONLY);
+	n = -2147483648;
+	if (fd == -1) 
+	{
+		perror("Erreur d'ouverture");
+		return 1;
+	}
+	ft_putnbr_fd(n,fd);
+	close (fd);
+	return(0);
+}*/

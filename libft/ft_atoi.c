@@ -6,7 +6,7 @@
 /*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/30 09:05:18 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/09/30 10:33:11 by Frederic Du      ###   ########.fr       */
+/*   Updated: 2025/10/02 15:11:12 by Frederic Du      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(const char *str)
 {
-	int		ngps;
-	int		result;
+	int	ngps;
+	int	result;
 
 	ngps = 1;
 	result = 0;

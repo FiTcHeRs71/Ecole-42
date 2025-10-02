@@ -1,35 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 11:33:55 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/10/02 11:26:14 by Frederic Du      ###   ########.fr       */
+/*   Created: 2025/10/01 15:54:25 by Frederic Du       #+#    #+#             */
+/*   Updated: 2025/10/02 15:12:42 by Frederic Du      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	size_t	len;
-	size_t	i;
-	char	*dest;
+	unsigned int	i;
 	
-	len = ft_strlen(s1);
 	i = 0;
-	dest = ft_calloc(len + 1, sizeof(char));
-	while (s1[i])
+	while(s[i])
 	{
-		dest[i] = s1[i];
+		(*f)(i,&s[i]);
 		i++;
 	}
-	dest[i] = '\0';
-	return (dest);
 }
 
-/*The strdup() function allocates sufficient memory for a copy of the string s1, 
-does the copy, and returns a pointer to it. 
-The pointer may subsequently be used as an argument to the function free(3).*/
+/*void	ft_putstr(unsigned int i, char *c)
+{
+	(void) i;
+	write(1, c, 1);
+}
+
+int	main(void)
+{
+	char	*str = "abcdefghijklmnopqrstuvwxyz";
+
+	ft_striteri(str, ft_putstr);
+	return (0);
+}*/
