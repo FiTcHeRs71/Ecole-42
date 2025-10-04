@@ -1,14 +1,4 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/01 16:33:07 by Frederic Du       #+#    #+#              #
-#    Updated: 2025/10/02 14:33:31 by Frederic Du      ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+
 
 NAME = libft.a
 
@@ -22,9 +12,12 @@ PART2 = ft_itoa.c ft_strjoin.c ft_split.c ft_striteri.c ft_strmapi.c \
 		ft_substr.c ft_strtrim.c ft_putchar_fd.c ft_putstr_fd.c \
 		ft_putendl_fd.c ft_putnbr_fd.c
 
-BONUS = 
 
-SRC = ${PART1} ${PART2}
+BONUS = ft_lstnew.c  ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
+		ft_lstmap.c
+
+SRC = ${PART1} ${PART2} ${BONUS}
 
 OBJS = ${SRC:.c=.o}
 BONUS_OBJS = ${BONUS:.c=.o}
@@ -32,7 +25,7 @@ BONUS_OBJS = ${BONUS:.c=.o}
 CC = gcc
 RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
-INCLUDE = -I .
+INCLUDE = -I 
 
 .o:.c
 		${CC} ${CFLAGS} ${INCLUDE} -c $< -o ${<:.c=.o}
@@ -40,7 +33,7 @@ INCLUDE = -I .
 $(NAME): ${OBJS}
 		ar rcs ${NAME} ${OBJS}
 
-all:	${NAME}
+all:	${NAME} 
 
 bonus:	${OBJS} ${BONUS_OBJS}
 		ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
@@ -49,7 +42,7 @@ clean:
 		${RM} ${OBJS} ${BONUS_OBJS}
 
 f: clean
-		${RM} ${NAME}
+		${RM} ${NAME} 
 
 re: fclean all
 

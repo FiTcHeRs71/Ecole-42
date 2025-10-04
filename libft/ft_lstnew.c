@@ -18,13 +18,12 @@ t_list	*ft_lstnew(void *content)
 
 /*int main(void)
 {
-	// Exemple 1 : tester avec une string
 	char *str = "Hello 42!";
 	t_list *node = ft_lstnew(str);
 	int i;
 
 	i = 0;
-	while (node->content[i])
+	while ((char *)node->content)[i])
 	{
 		write(1, &((char *)node->content)[i], 1);
 		i++;
@@ -35,7 +34,6 @@ t_list	*ft_lstnew(void *content)
 
 	free(node);
 
-	// Exemple 2 : tester avec un entier
 	int n = 42;
 	node = ft_lstnew(&n);
 
