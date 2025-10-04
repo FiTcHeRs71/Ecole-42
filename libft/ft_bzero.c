@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 09:31:08 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/09/30 09:31:08 by Frederic Du      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -32,5 +21,5 @@ void	ft_bzero(void *s, size_t n)
 	//printf("%s\n", (char*)bzero(str, i));
 }*/
 
-
-/*This function does not return anything and if the number of characters to write you passed as size_t n is 0, bzero does nothing.*/
+/*This function does not return anything and if the number of characters to write you passed as size_t n is 0,
+	bzero does nothing.*/

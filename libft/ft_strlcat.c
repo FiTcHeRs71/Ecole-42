@@ -1,16 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 09:11:30 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/09/30 09:11:30 by Frederic Du      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t dst_len;
@@ -25,7 +16,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	if (dst_len == dstsize)
 	{
-		return(dstsize + src_len);
+		return (dstsize + src_len);
 	}
 	if (src_len < dstsize - dst_len)
 	{
@@ -50,7 +41,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 }*/
 
 /*La fonction strlcat() concatène des chaînes avec les mêmes paramètres d’entrée et le même résultat de sortie que snprintf(3).
-Elle est conçue pour être une alternative plus sûre, plus cohérente et moins sujette aux erreurs que la fonction strncat(3), souvent mal utilisée.
+Elle est conçue pour être une alternative plus sûre,
+	plus cohérente et moins sujette aux erreurs que la fonction strncat(3),
+	souvent mal utilisée.
 
 strlcat() prend en compte la taille totale du tampon de destination et garantit la terminaison par un caractère NUL si de la place est disponible.
 ⚠️ Remarque : l’espace pour le caractère NUL doit être inclus dans dstsize.

@@ -1,23 +1,13 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 10:09:00 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/10/02 13:27:24 by Frederic Du      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start,size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
 	size_t	real_len;
 	size_t	i;
-	
+
 	i = 0;
 	if (!s)
 	{
@@ -39,7 +29,7 @@ char	*ft_substr(char const *s, unsigned int start,size_t len)
 		i++;
 	}
 	str[i] = '\0';
-	return(str);
+	return (str);
 }
 
 /*int	main(void)
@@ -49,7 +39,7 @@ char	*ft_substr(char const *s, unsigned int start,size_t len)
 
 	//unsigned int i = 0;
 	//si ze_t len = ft_strlen(str);
-	
+
 	sub = ft_substr(str, 1, 1);
 	printf("%s\n", sub);
 	return (0);

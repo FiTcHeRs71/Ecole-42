@@ -1,27 +1,18 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 09:11:23 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/09/30 09:11:23 by Frederic Du      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "libft.h"
+
 void	*ft_memset(void *s, int c, size_t len)
 {
-	unsigned char	*tmp;
+	unsigned char *tmp;
 
 	tmp = (unsigned char *)s;
 	while (len-- > 0)
 	{
-		*tmp++ = (unsigned char) c;
+		*tmp++ = (unsigned char)c;
 	}
 	return (s);
-}	
+}
 
 /*int		main(int argc, char **argv)
 {

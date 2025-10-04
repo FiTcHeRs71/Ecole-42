@@ -1,14 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/01 11:51:03 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/10/02 14:27:28 by Frederic Du      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 
 #include "libft.h"
@@ -43,7 +32,7 @@ char	*ft_itoa(int n)
 	size_t		max;
 	long int	nbr;
 	char		*result;
-	
+
 	i = 0;
 	len = ft_count_int(n);
 	nbr = n;
@@ -65,19 +54,18 @@ char	*ft_itoa(int n)
 	return (result);
 }
 
-
- /*int	main(void)
+/*int	main(void)
 {
-	char	*str;
-	int	i;
+   char	*str;
+   int	i;
 
-	i = 0;
-	str = ft_itoa(-21474838);
+   i = 0;
+   str = ft_itoa(-21474838);
 
-	while(str[i])
-	{
+   while(str[i])
+   {
 		write(1, &str[i], 1);
 		i++;
-	}
+   }
 
 }*/

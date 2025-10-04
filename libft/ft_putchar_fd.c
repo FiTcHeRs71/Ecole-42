@@ -1,18 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/02 13:43:40 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/10/02 14:01:43 by Frederic Du      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "libft.h"
 
-void ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }
@@ -21,13 +11,13 @@ void ft_putchar_fd(char c, int fd)
 {
 	int	fd;
 	char	c;
-	
+
 	fd = open("test.txt", O_WRONLY);
 	c = 'A';
-	if (fd == -1) 
+	if (fd == -1)
 	{
-    	perror("Erreur d'ouverture");
-    	return 1;
+		perror("Erreur d'ouverture");
+		return (1);
 	}
 	ft_putchar_fd(c,fd);
 	close (fd);
@@ -36,18 +26,16 @@ void ft_putchar_fd(char c, int fd)
 
 /*
 NAME
-    ft_putchar_fd -- write character c on a specified file descriptor
+	ft_putchar_fd -- write character c on a specified file descriptor
 SYNOPSIS
-    void ft_putchar_fd(char c, int fd);
+	void ft_putchar_fd(char c, int fd);
 DESCRIPTION
-    The ft_putchar_fd() function writes the character c on the file descriptor fd.
+	The ft_putchar_fd() function writes the character c on the file descriptor fd.
 PARAMETERS
-    c: character to write
-    fd: file descriptor on which to write
+	c: character to write
+	fd: file descriptor on which to write
 RETURN VALUES
-    ft_putchar_fd() does not return anything.
+	ft_putchar_fd() does not return anything.
 AUTHORIZED EXTERNAL FUNCTIONS
-    write(2)
-    */
-
-
+	write(2)
+	*/

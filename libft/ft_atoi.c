@@ -1,14 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 09:05:18 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/10/02 15:11:12 by Frederic Du      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include "libft.h"
 
@@ -51,7 +41,7 @@ int	ft_atoi(const char *str)
 	printf("Test 8 : '%s' -> %d\n", "4a2", ft_atoi("4a2"));
 	printf("Test 9 : '%s' -> %d\n", "000123", ft_atoi("000123"));
 	printf("Test 10 : '%s' -> %d\n", "-000987", ft_atoi("-000987"));
-	return 0;
+	return (0);
 }*/
 
 /*int main(void)
@@ -59,5 +49,5 @@ int	ft_atoi(const char *str)
 	printf("Test 1 : '%s' -> %d\n", "9999999999999", atoi("9999999999999"));
 }*/
 
-/*The atoi() function converts the initial portion of the string pointed 
+/*The atoi() function converts the initial portion of the string pointed
 to by str to int representation.*/

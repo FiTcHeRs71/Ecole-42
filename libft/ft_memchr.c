@@ -1,22 +1,13 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 09:11:09 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/09/30 09:11:09 by Frederic Du      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 #include "libft.h"
+
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*str;
-	int		i;
+	unsigned char *str;
+	int i;
 
-	str = (unsigned char*) s;
+	str = (unsigned char *)s;
 	i = 0;
 	while (n-- > 0)
 	{

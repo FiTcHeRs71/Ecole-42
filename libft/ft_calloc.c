@@ -1,26 +1,22 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: Frederic Ducrot <fducrot@student.42laus    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/30 09:10:47 by Frederic Du       #+#    #+#             */
-/*   Updated: 2025/09/30 09:10:47 by Frederic Du      ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
 
 #include "libft.h"
 
+
 void	*ft_calloc(size_t count, size_t size)
 {
-	unsigned char	*temp;
+	unsigned char *temp;
 
-	if (count <= 0 || size <= 0)
+	if (count == 0 || size == 0)
 	{
-		return malloc(1); 
+		temp = malloc(1);
+		if (!temp)
+		{
+			return (NULL);
+		}
+		temp[0] = 0;
+		return (temp);
 	}
-	if(count > SIZE_MAX / size)
+	if (count > SIZE_MAX / size)
 	{
 		return (NULL);
 	}
@@ -40,5 +36,6 @@ void	*ft_calloc(size_t count, size_t size)
 
 }*/
 
-/*calloc() works in the same way as malloc() does, but the difference is that calloc() sets all the memory bytes are set to 0,
+/*calloc() works in the same way as malloc() does,
+	but the difference is that calloc() sets all the memory bytes are set to 0,
  instead of staying as the gibberish that was there in memory before we allocated it.*/
