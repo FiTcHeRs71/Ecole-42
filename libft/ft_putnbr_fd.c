@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:34:19 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 15:04:45 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -22,19 +32,20 @@ void	ft_putnbr_fd(int n, int fd)
 	write(fd, &r, 1);
 }
 
-/*int	main(void)
-{
-	int		fd;
-	int	n;
+/*
+FT_PUTNBR_FD (simplified)
 
-	fd = open("test.txt", O_WRONLY);
-	n = -2147483648;
-	if (fd == -1)
-	{
-		perror("Erreur d'ouverture");
-		return (1);
-	}
-	ft_putnbr_fd(n,fd);
-	close (fd);
-	return(0);
-}*/
+NAME
+    ft_putnbr_fd -- write an int on a specified file descriptor
+SYNOPSIS
+    void ft_putnbr_fd(int n, int fd);
+DESCRIPTION
+    ft_putnbr_fd() writes the int n on the file descriptor fd
+PARAMETERS
+    n: int to write
+    fd: file descriptor on which to write
+RETURN VALUES
+    ft_putnbr_fd() does not return anything
+AUTHORIZED EXTERNAL FUNCTIONS
+    write(2)
+	*/

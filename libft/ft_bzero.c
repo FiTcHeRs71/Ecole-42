@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:27:43 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 14:27:43 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -6,20 +17,14 @@ void	ft_bzero(void *s, size_t n)
 	ft_memset(s, 0, n);
 }
 
-/*int		main(int argc, char **argv)
-{
-	(void)argc;
-	(void)argv;
+/*
+BZERO(3) (simplified)
 
-	char str[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-	size_t i;
-
-	i = 5;
-	ft_bzero(str, i);
-	//printf("%s\n", (char*)ft_bzero(str, i));
-	//printf("%s\n", (char*)bzero(str, i));
-}*/
-
-/*This function does not return anything and if the number of characters to write you passed as size_t n is 0,
-	bzero does nothing.*/
+NAME
+    bzero -- write zeroes to a bye string
+SYNOPSIS
+    void bzero(void *s, size_t n);
+DESCRIPTION
+    The bzero() function writes n zeroed bytes to the string s. 
+	If n is zero, bzero() does nothing.
+	*/

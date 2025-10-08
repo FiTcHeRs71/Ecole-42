@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:34:14 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 14:34:17 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -15,25 +25,7 @@ void	ft_putendl_fd(char *s, int fd)
 	write(fd, "\n", 1);
 }
 
-/*int	main(void)
-{
-	int	fd;
-	char	*c;
-
-	fd = open("test.txt", O_WRONLY);
-	c = "KCORP ON FIRE";
-	if (fd == -1)
-	{
-		perror("Erreur d'ouverture");
-		return (1);
-	}
-	ft_putendl_fd(c,fd);
-	close (fd);
-	return(0);
-}*/
-
-/*
-FT_PUTENDL_FD (simplified)
+/*FT_PUTENDL_FD (simplified)
 
 NAME
 	ft_putendl_fd -- write a string on a specified file descriptor,

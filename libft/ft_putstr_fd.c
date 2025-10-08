@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:34:23 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/07 10:56:53 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -13,23 +23,6 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-
-/*int	main(void)
-{
-	int	fd;
-	char	*c;
-
-	fd = open("test.txt", O_WRONLY);
-	c = "KCORP ON FIRE";
-	if (fd == -1)
-	{
-		perror("Erreur d'ouverture");
-		return (1);
-	}
-	ft_putstr_fd(c,fd);
-	close (fd);
-	return(0);
-}*/
 
 /*
 NAME

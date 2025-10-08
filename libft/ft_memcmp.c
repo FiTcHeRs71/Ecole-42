@@ -1,11 +1,21 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:33:41 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 14:33:41 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	unsigned char *str1;
-	unsigned char *str2;
+	unsigned char	*str1;
+	unsigned char	*str2;
 
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
@@ -22,15 +32,22 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-/*int		main(void)
-{
-	char *str = "KCORP";
-	char *stt = "KCOR";
-	int r;
+/*
+MEMCMP(3) (simplified)
 
-	r = ft_memcmp(str, stt, 30);
-	printf("%d", r);
-}*/
-
-/*La fonction memcmp() compare la chaîne d’octets s1 avec la chaîne d’octets s2.
-Les deux chaînes sont supposées avoir une longueur de n octets.*/
+NAME
+    memcmp -- compare byte string
+SYNOPSIS
+    int memcmp(const void *s1, const void *s2, size_t n)
+DESCRIPTION
+    The memcmp() function compares byte string s1 against byte string s2.
+    Both strings are assumed to be n bytes long.
+RETURN VALUES
+    The memcmp() function returns zero if the two strings are identical, 
+	otherwise returns the difference betwee the first two differing bytes 
+	(treated as unsigned char values, so that '\200' is greater than '\0', 
+	for example).
+    Zero-length strings are always identical. This behaviour is not required 
+	by C and portable code should only depend on the sign of the 
+	returned value.
+	*/

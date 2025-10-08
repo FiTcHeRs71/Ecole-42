@@ -1,9 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:28:16 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 14:28:16 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
 int	ft_isalpha(int c)
 {
-	if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}
@@ -11,12 +22,22 @@ int	ft_isalpha(int c)
 	{
 		return (0);
 	}
-	
 }
 
-/*Cette fonction permet de tester si un caractère est alphabétique ou non.
+/*
+ISALPHA(3) (simplified)
 
-Un caractère sera considéré comme alphabétique s'il est de lettres minuscules ou de lettres majuscules. 
+NAME
+    isalpha -- alphabetic character test
+SYNOPSIS
+    int isalpha(int c)
+DECRIPTION
+    The isalpha() function tests for any character for which isupper(3) 
+	or islower(3) is true. 
+	The value of the argument must be resprensentable as an unsigned char 
+	or the value of EOF.
 
-Rappel : les fonctions de cette librairie ne traitent que les caractères purs ASCII. Les lettres accentuées, 
-ne seront donc pas considérées comme des caractères alpha-numériques.*/
+RETURN VALUES
+    The isalpha() function return zero if the character 
+	tests false and returns non-zero if the character tests true.
+*/

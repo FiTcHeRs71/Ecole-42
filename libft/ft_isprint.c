@@ -1,7 +1,16 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:31:41 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 14:31:41 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	ft_isprint(int c)
 {
@@ -13,7 +22,13 @@ int	ft_isprint(int c)
 	}
 }
 
-/* The isprint() function tests for any printing character,
- including space.
-The value of the argument must representable as an
-unsigned char or the value of EOF.*/
+/*
+ISASCII(3) (simplified)
+
+NAME
+    isascii -- test for ASCII character
+SYNOPSIS
+    int isascii(int c)
+DESCRIPTION
+    The isascii() function tests for an ASCII character, 
+	which is any character between 0 and octal 0177 inclusive.*/

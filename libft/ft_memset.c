@@ -1,10 +1,20 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:34:02 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 14:34:02 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t len)
 {
-	unsigned char *tmp;
+	unsigned char	*tmp;
 
 	tmp = (unsigned char *)s;
 	while (len-- > 0)
@@ -14,19 +24,16 @@ void	*ft_memset(void *s, int c, size_t len)
 	return (s);
 }
 
-/*int		main(int argc, char **argv)
-{
-	int	c;
-	(void)argc;
-	(void)argv;
+/*
+MEMSET(3) (simplified)
 
-	char str[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	c = 'Z';
-	size_t i;
-
-	i = 25;
-	printf("%s\n", (char*)ft_memset(str, c, i));
-	printf("%s\n", (char*)memset(str, c, i));
-}*/
-
-/*The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.*/
+NAME
+    memset -- fill a byte string with a byte value
+SYNOPSIS
+    void *memset(void *b, int c, size_t len);
+DESCRIPTION
+    The memset() function writes len bytes of value c 
+	(converted to an unsigned char) to the string b.
+RETURN VALUES
+    The memset() function returns its first argument.
+	*/

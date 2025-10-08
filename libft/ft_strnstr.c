@@ -1,15 +1,24 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:35:38 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 14:35:38 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
 
 	if (*needle == '\0')
 		return ((char *)haystack);
-
 	i = 0;
 	while (haystack[i] && i < len)
 	{
@@ -26,18 +35,20 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-/*int main (void)
-{
-	char	*str = "dfsqfvgsqcapsdcsdqc";
-	char	*needle = "capi";
-	size_t len = 13;
+/*
+STRNSTR(3) (simplified)
 
-	char *finder;
-
-	finder = ft_strnstr(str, needle, len);
-	printf("%s", finder);
-}*/
-
-/*La fonction strnstr() localise la première occurrence de la chaîne terminée par un caractère nul (needle) dans la chaîne haystack,
-en recherchant au maximum len caractères.
-Les caractères situés après un '\0' ne sont pas pris en compte dans la recherche.*/
+NAME
+    strnstr -- locate a substring in a string
+SYNOPSIS
+    char *strnstr(const char *haystack, const char *needle, size_t len);
+DESCRIPTION
+    The strnstr() function locates the first occurence of the 
+	null-terminated string needle in the string haystack, 
+	where not more than len characters are searched.
+    Characters that appear after a '\0' character are not searched.
+RETURN VALUES
+    If needle is an empty string, haystack is returned; if needle 
+	occurs nowhere in haystack, NULL is returned; otherwise a pointer 
+	to the first character of the first occurence of needle is returned.
+	*/

@@ -1,39 +1,54 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:35:28 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 14:35:28 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	while ((*s1 || *s2) && (n > 0))
+	unsigned char	*tmp1;
+	unsigned char	*tmp2;
+
+	tmp1 = (unsigned char *)s1;
+	tmp2 = (unsigned char *)s2;
+	while ((*tmp1 || *tmp2) && (n > 0))
 	{
-		if (*s1 != *s2)
+		if (*tmp1 != *tmp2)
 		{
-			return (*s1 - *s2);
+			return (*tmp1 - *tmp2);
 		}
-		s1++;
-		s2++;
+		tmp1++;
+		tmp2++;
 		n--;
 	}
 	return (0);
 }
 
-/*int		main(void)
-{
-	char *str = "KCORP";
-	char *stt = "KCOR";
-	int r;
+/*
+STRNCMP(3) (simplified)
 
-	r = ft_strncmp(str, stt, 30);
-	printf("%d", r);
-}*/
-
-/*Cette fonction permet de comparer deux chaînes de caractères et de savoir si la première est inférieure,
-	égale ou supérieure à la seconde.
-Cette comparaison sera faite dans l'ordre lexicographique (et donc,
-	en tenant compte des valeurs ASCII des différents caractères comparés).
-Néanmoins la comparaison se fera au maximum sur les length premiers caractères.
-
-En langage C,
-	les chaînes de caractères sont qualifiées d'AZT : A Zéro Terminal.
-Cela signifie qu'une chaîne de caractères se termine forcément par un code ASCII nul (pouvant aussi être représenté par '\0').*/
+NAME
+    strncmp -- compare strings
+SYNOPSIS
+    int strncmp(const char *s1, const char *s2, size_t n);
+DESCRIPTION
+    The strncmp() function lexicographically compare the null-terminated 
+	strings s1 and s2.
+    The strncmp() function compares not more than n characters. 
+	Because strncmp() is designed for comparing strings rather than binary data,
+	 characters that appear after a '\0' character are not compared.
+RETURN VALUES
+    The strncmp() function returns an integer greater than, equal to, 
+	or less than 0, according as the string s1 is greater than, equal to, 
+	or less than the string s2. The comparison is done using unsigned 
+	characters, 
+	so that '\200' is greater than '\0'.
+	*/

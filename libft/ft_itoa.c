@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:31:47 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/07 08:54:54 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -29,15 +39,16 @@ char	*ft_itoa(int n)
 {
 	size_t		i;
 	size_t		len;
-	size_t		max;
 	long int	nbr;
 	char		*result;
 
 	i = 0;
 	len = ft_count_int(n);
 	nbr = n;
-	max = len;
 	result = ft_calloc(len + 1, sizeof(char));
+	if (!result)
+		return (NULL);
+	result[len] = '\0';
 	if (nbr < 0)
 	{
 		result[0] = '-';
@@ -50,22 +61,24 @@ char	*ft_itoa(int n)
 		result[len] = (nbr % 10) + 48;
 		nbr /= 10;
 	}
-	result[max] = '\0';
 	return (result);
 }
 
-/*int	main(void)
-{
-   char	*str;
-   int	i;
+/*
+FT_ITOA (simplified)
 
-   i = 0;
-   str = ft_itoa(-21474838);
-
-   while(str[i])
-   {
-		write(1, &str[i], 1);
-		i++;
-   }
-
-}*/
+NAME
+    ft_itoa -- convert an int to a string
+SYNOPSIS
+    char *ft_itoa(int n);
+DESCRIPTION
+    Allocate (with malloc(3)) and returns a string representing n.
+    Negative numbers must be handled.
+PARAMETERS
+    n: int to convert
+RETURN VALUES
+    ft_itoa() returns the string representing n; NULL if
+	 the memory allocation failed.
+AUTHORIZED EXTERNAL FUNCTIONS
+    malloc(3)
+	*/

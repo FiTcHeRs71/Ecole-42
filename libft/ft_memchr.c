@@ -1,11 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:33:35 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 14:33:35 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
-
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char *str;
-	int i;
+	unsigned char	*str;
+	int				i;
 
 	str = (unsigned char *)s;
 	i = 0;
@@ -20,18 +30,17 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 
-/*int		main(void)
-{
-	char *str = "BONJOUR";
-	char	*r;
-	//char	*s;
-	int	c = 'J';
-	size_t	n = 3;
+/*
+MEMCHR(3) (simplified)
 
-	r = ft_memchr(str, c + 256, n);
-	//s = memchr(str, c, n);
-
-	printf("%s\n", r);
-	//printf("%s\n", s);
-}*/
-/*La fonction memchr() localise la première occurrence de c (converti en caractère non signé) dans la chaîne s.*/
+NAME
+    memchr -- locate byte in byte string
+SYNOPSIS
+    void *memchr(const void *s, int c, size_t n);
+DESCRIPTION
+    the memchr() function locates the first occurence of c 
+	(convered to an unsigned char) in string s.
+RETURN VALUES
+    The memchr() function returns a pointer to the byte located, or 
+	NULL if no such byte exists within n bytes.
+	*/

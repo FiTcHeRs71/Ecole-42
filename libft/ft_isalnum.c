@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:28:04 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/06 14:28:04 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -13,7 +24,18 @@ int	ft_isalnum(int c)
 	}
 }
 
-/*Cette fonction permet de tester si un caractère est alpha-numérique ou non.
-Un caractère sera considéré comme alpha-numérique s'il est une lettre (minuscule ou majuscule) ou un chiffre.
-Rappel : les fonctions de cette librairie ne traitent que les caractères purs ASCII.
-Les lettres accentuées ne seront donc pas considérées comme des caractères alpha-numériques.*/
+/*
+ISALNUM(3) (simplified)
+
+NAME
+    isalnum -- alphanumeric character test
+SYNOPSIS
+    int isalnum(int c)
+DESCRIPTION
+    The isalnum() function tests for any character for which isalpha(3) or 
+	isdigit(3) is true. The value of the argument must be representable 
+	as an unsigned char or the value of EOF.
+RETURN VALUES
+    The isalnum() function returns zero if the character tests 
+	false and returns non-zero if the character tests true.
+	*/

@@ -1,4 +1,14 @@
-
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/06 14:35:52 by fdcurot           #+#    #+#             */
+/*   Updated: 2025/10/07 08:47:08 by fdcurot          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -8,6 +18,10 @@ char	*ft_strtrim(const char *s1, const char *set)
 	size_t	start;
 	size_t	end;
 
+	if (!s1 || !set)
+	{
+		return (NULL);
+	}
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (s1[start] && ft_strchr(set, s1[start]))
@@ -19,32 +33,30 @@ char	*ft_strtrim(const char *s1, const char *set)
 		end--;
 	}
 	str = ft_substr(s1, start, end - start + 1);
+	if (!str)
+	{
+		return (NULL);
+	}
 	return (str);
 }
 
-/*int	main(void)
-{
-	char *s1 = "ababaaaMy name is Simonbbaaabba";
-	char *set = "ab";
-	char *retour;
+/*
+FT_STRTRIM (simplified)
 
-	retour = ft_strtrim(s1,set);
-
-	printf("%s\n", retour);
-	return (0);
-
-}*/
-
-/*The ft_strtrim() function takes a string and trims it.
-
-What does trimming mean you might ask ? Let me explain.
-
-Trimming means removing the characters specified in the set string from the
-start AND the end of the string s1, without removing the characters from the
-set that are in the middle of s1.
-
-If we have the string ababaaaMy name is Simonbbaaabbad and our set is ab,
- we'll get this result out of the ft_strtrim() function : My name is Simon.
-
-We removed every a and b from the start and the end of s1,
-without touching at the a in the middle of s1.*/
+NAME
+    ft_strtrim -- trims character set from string
+SYNOPSIS
+    char *ft_strtrim(const char *s1, const char *set);
+DESCRIPTION
+    Allocate (with malloc(3)) and returns a copy of s1, 
+	without the characters specified in set at the beginning 
+	and the end of s1.
+PARAMETERS
+    s1: string to trim
+    set: characters to trim
+RETURN VALUES
+    ft_strtrim() returns a trimmed copy of s1; 
+	NULL if the memory allocation failed.
+AUTHORIZED EXTERNAL FUNCTIONS
+    malloc(3)
+	*/
