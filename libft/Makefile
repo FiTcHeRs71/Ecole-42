@@ -26,13 +26,13 @@ RM = rm -f
 CFLAGS = -Wall -Wextra -Werror
 INCLUDE = -I 
 
-%o:%c
+%.o:%.c
 		${CC} ${CFLAGS} ${INCLUDE} -c $< -o $@
 
 $(NAME): ${OBJS}
 		ar rcs ${NAME} ${OBJS}
 
-all:	${NAME}
+all:	${NAME} bonus
 
 bonus:	${OBJS} ${BONUS_OBJS}
 		ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}

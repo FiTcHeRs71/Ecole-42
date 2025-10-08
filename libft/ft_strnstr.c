@@ -3,33 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: yourlogin <youremail@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/06 14:35:38 by fdcurot           #+#    #+#             */
-/*   Updated: 2025/10/06 14:35:38 by fdcurot          ###   ########.fr       */
+/*   Created: 2025/10/08 11:41:00 by yourlogin         #+#    #+#             */
+/*   Updated: 2025/10/08 11:41:11 by yourlogin        ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
 
-	if (*needle == '\0')
-		return ((char *)haystack);
+	if (*little == '\0')
+		return ((char *)big);
 	i = 0;
-	while (haystack[i] && i < len)
+	while (big[i] && i < len)
 	{
 		j = 0;
-		while (haystack[i + j] && needle[j] && haystack[i + j] == needle[j] && i
+		while (big[i + j] && little[j] && big[i + j] == little[j] && i
 			+ j < len)
 		{
 			j++;
 		}
-		if (needle[j] == '\0')
-			return ((char *)&haystack[i]);
+		if (little[j] == '\0')
+			return ((char *)&big[i]);
 		i++;
 	}
 	return (NULL);
@@ -41,14 +41,14 @@ STRNSTR(3) (simplified)
 NAME
     strnstr -- locate a substring in a string
 SYNOPSIS
-    char *strnstr(const char *haystack, const char *needle, size_t len);
+    char *strnstr(const char *big, const char *little, size_t len);
 DESCRIPTION
     The strnstr() function locates the first occurence of the 
-	null-terminated string needle in the string haystack, 
+	null-terminated string little in the string big, 
 	where not more than len characters are searched.
     Characters that appear after a '\0' character are not searched.
 RETURN VALUES
-    If needle is an empty string, haystack is returned; if needle 
-	occurs nowhere in haystack, NULL is returned; otherwise a pointer 
-	to the first character of the first occurence of needle is returned.
+    If little is an empty string, big is returned; if little 
+	occurs nowhere in big, NULL is returned; otherwise a pointer 
+	to the first character of the first occurence of little is returned.
 	*/

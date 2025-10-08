@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: fdcurot <fducrot@student.42lausanne.ch>    +#+  +:+       +#+        */
+/*   By: yourlogin <youremail@student.42lausanne.ch>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/06 14:34:28 by fdcurot           #+#    #+#             */
-/*   Updated: 2025/10/07 10:02:53 by fdcurot          ###   ########.fr       */
+/*   Created: 2025/10/08 11:46:21 by yourlogin         #+#    #+#             */
+/*   Updated: 2025/10/08 11:46:25 by yourlogin        ###   ########.ch       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ char	**ft_split(char const *s, char c)
 	}
 	return (array_of_string);
 }
-
+/*
 FT_SPLIT (simplified)
 
 NAME
